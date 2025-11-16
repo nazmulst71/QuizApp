@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+
+
+<h2 class="text-primary">Admin Dashboard</h2>
+<div class="row p-3 gap-3">
+    <a class="btn btn-primary col-sm-3" asp-controller="Admin" asp-action="CreateQuiz">Create Exam</a>
+    <a class="btn btn-secondary col-sm-3" asp-controller="Admin" asp-action="Index">Exam List</a>
+</div>
+<div class="row p-3 gap-3">
+    <a class="btn btn-info col-sm-3 bottom-50" asp-controller="Result" asp-action="Index">See Results</a>
+    <a class="btn btn-warning col-sm-3" asp-controller="Result" asp-action="Publish">Publish Results</a>
+
+</div>
+
+<a class="btn btn-danger" asp-controller="Home" asp-action="Index">Logout</a>
+
+
+ 

@@ -1,0 +1,24 @@
+﻿@{
+    var studentName = Context.Session.GetString("StudentName");
+}
+
+
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml"; // ← if you're using a custom layout
+    var StudentName = Context.Session.GetString("StudentName");
+}
+
+<h2>Welcome, @studentName!</h2>
+
+
+
+<div>
+    <div class="row col-3 p-2">
+        <a class="btn btn-primary" asp-controller="Quiz" asp-action="Index">Available Quizzes</a>
+    </div>
+
+    <div class="row col-3 p-2">
+        <a class="btn btn-info" >See My Results</a>
+    </div>
+</div>
+

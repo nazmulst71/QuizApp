@@ -1,0 +1,52 @@
+﻿@model QuizApp.Models.User
+
+<h2>Student Registration</h2>
+
+@using (Html.BeginForm("Register", "Student", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.InstituteName)
+        @Html.TextBoxFor(m => m.InstituteName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+    </div>
+
+    <div>
+
+        @if (ViewBag.SuccessMessage != null)
+        {
+            <div class="alert alert-success">
+                @ViewBag.SuccessMessage
+            </div>
+        }
+    </div>
+
+    <div class="p-3">
+        
+        <p> <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-primary" asp-controller="Home" asp-action="Index" >Go Back</button>
+        
+        </p>
+
+    </div>
+
+}
+
+ 

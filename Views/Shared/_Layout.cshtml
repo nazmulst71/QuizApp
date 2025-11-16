@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MR.TEST</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MR.TEST.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container"
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">MR.TEST</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                          <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Login
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="Login">Admin</a></li>
+                            <li><a class="dropdown-item" href="#">Teacher</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Student" asp-action="Login">Student</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+
+
+                     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                          <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Signup
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Teacher</a></li>
+                            <li><a class="dropdown-item"asp-area="" asp-controller="Student" asp-action="Register">Student</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+
+
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class="container">
+        <footer class="border-top fixed-bottom footer text-muted ">
+       <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2025 Copyright: MR.QUIZ
+        
+      </div>
+
+    </footer>
+
+    </div>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    </div>
+</body>
+</html>
